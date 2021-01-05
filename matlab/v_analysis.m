@@ -1,7 +1,7 @@
 clf
 clear
 
-% Load data
+% Load data from CSV files
 data_1 = load("data_1.csv");
 dt = data_1(1, 1); % Sampling period
 t = data_1(:, 1); % Time
@@ -16,7 +16,7 @@ raw_data = load("raw_data.csv");
 raw_v = raw_data(1:N, 2); % Raw velocities
 raw_alt = raw_data(1:N, 3); % Raw altitudes
 
-% Filter
+% Filter velocity signals
 break_freq_1 = 0;
 break_freq_2 = 1;
 

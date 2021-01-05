@@ -5,7 +5,7 @@ to extract the horizontal and vertical velocity. DSP
 techniques are used to filter the data.
 
 This project is very similar to my other project,
-[AgentTroll/liftoff](https://github.com/AgentTroll/liftoff)
+[`AgentTroll/liftoff`](https://github.com/AgentTroll/liftoff)
 and even uses the same data. However, this project takes a
 slightly different approach and is not as comprehensive.
 Rather than simulating physical dynamics, `telem-filter`
@@ -14,23 +14,24 @@ vertical velocity components verbatim from the data rather
 than using curve fitting.
 
 The data is processed in a 3 step manner: in the first
-step, the initial horizontal and vertical velocities are
-extracted by "pitching" over when the velocity is greater
-than that needed to reach the current altitude. In the
-second step, this data is then passed through a
-Parks-McClellan low-pass filter with a cutoff-frequency of
-1 Hz. In the final step, this data is then adjusted to
-account for small deviations to velocity and then plotted
-along with error values.
+step, the altitude telemetry is interpolated and the
+initial horizontal and vertical velocities are extracted
+by "pitching" over when the velocity is greater than that
+needed to reach the current altitude. In the second step,
+this data is then passed through a Parks-McClellan low-pass
+filter with a cutoff-frequency of 1 Hz. In the final step,
+the filtered velocities are then adjusted to account for
+velocity error by absorbing the error into the horizontal
+velocity.
 
 While this produces a surprisingly good result, this is
-inferior to curve fitting because the beyond the derivative
-of position is not accounted for. It is clear from the
-velocity plots that the acceleration and jerk will not be
-realistic (will be much higher than in the real-world).
-However, with further processing and curve-fitting used in
-`AgentTroll/liftoff`, this data can be salvaged into very
-good data.
+inferior to curve fitting because anything beyond the 
+derivative of position is not accounted for. It is clear
+from the velocity plots that the acceleration and jerk will
+not be realistic (will be much higher than in the real-
+world). However, with further processing and curve-fitting 
+used in `AgentTroll/liftoff`, this data can be salvaged
+into very good data.
 
 # Disclaimer
 
@@ -41,7 +42,7 @@ deployed to production.
 
 # Demo
 
-![filtered-adjusted.png](https://i.postimg.cc/90p3DKMP/filtered-adjusted.png)
+![filtered-adjusted.png](https://i.postimg.cc/dVbYPV1D/filtered-adjusted.png)
 
 # Building
 

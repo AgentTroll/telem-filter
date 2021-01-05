@@ -12,11 +12,18 @@ find_package(FLTK)
 add_executable(telem_filter
         src/main.cpp
         src/telem_data.cpp src/telem_data.h
-        src/telem_plotter.cpp src/telem_plotter.h
+        src/mgl_plotter.cpp src/mgl_plotter.h
         src/telem_data_json.cpp src/telem_data_json.h
         src/csv_writer.cpp src/csv_writer.h
         src/csv_reader.cpp src/csv_reader.h
-        src/filter.cpp src/filter.h)
+        src/digital_filter.cpp src/digital_filter.h
+        src/stage_1_plotter.cpp src/stage_1_plotter.h
+        src/stage_2_plotter.cpp src/stage_2_plotter.h
+        src/stage_3_plotter.cpp src/stage_3_plotter.h
+        src/c11_binary_latch.cpp src/c11_binary_latch.h
+        src/vector2d.cpp src/vector2d.h
+        src/staged_mgl_plotter.h
+        src/telem_staged_plotter.h)
 target_link_libraries(telem_filter
         PRIVATE json
         PRIVATE ${MATHGL2_LIBRARIES}

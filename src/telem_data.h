@@ -36,6 +36,11 @@ public:
                std::map<double, double> altitudes);
 
     /**
+     * Initializes the telemetry data with empty datasets.
+     */
+    telem_data();
+
+    /**
      * Obtains the mapping of time offsets to velocity
      * magnitudes.
      *

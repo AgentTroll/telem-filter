@@ -2,16 +2,16 @@
  * @file
  */
 
-#ifndef TELEM_FILTER_FILTER_H
-#define TELEM_FILTER_FILTER_H
+#ifndef TELEM_FILTER_DIGITAL_FILTER_H
+#define TELEM_FILTER_DIGITAL_FILTER_H
 
 #include <vector>
 
 /**
- * @brief Represents a filter consisting of the transfer
- * function coefficients.
+ * @brief Represents a digital filter consisting of the
+ * transfer function coefficients.
  */
-class filter {
+class digital_filter {
 private:
     /**
      * Filter numerator coefficients.
@@ -29,8 +29,8 @@ public:
      * @param b the numerator coefficients
      * @param a the denominator coefficients
      */
-    filter(std::vector<double> b,
-           std::vector<double> a);
+    digital_filter(std::vector<double> b,
+                   std::vector<double> a);
 
     /**
      * Creates a new FIR filter with the given filter
@@ -40,7 +40,7 @@ public:
      *
      * @param b the numerator coefficients
      */
-    explicit filter(std::vector<double> b);
+    explicit digital_filter(std::vector<double> b);
 
     /**
      * Performs a 1-D transformation of the given signal by
@@ -52,4 +52,4 @@ public:
     std::vector<double> transform(const std::vector<double> &signal);
 };
 
-#endif // TELEM_FILTER_FILTER_H
+#endif // TELEM_FILTER_DIGITAL_FILTER_H

@@ -5,8 +5,6 @@
 #ifndef TELEM_FILTER_TELEM_DATA_JSON_H
 #define TELEM_FILTER_TELEM_DATA_JSON_H
 
-#include <string>
-
 #include "telem_data.h"
 
 /**

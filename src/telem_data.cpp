@@ -6,6 +6,10 @@ telem_data::telem_data(std::map<double, double> velocities,
         altitudes(std::move(altitudes)) {
 }
 
+telem_data::telem_data() :
+        telem_data({}, {}) {
+}
+
 const std::map<double, double> &telem_data::get_velocities() const {
     return velocities;
 }

@@ -1,17 +1,17 @@
-#include "filter.h"
+#include "digital_filter.h"
 
 #include <deque>
 
-filter::filter(std::vector<double> b,
-               std::vector<double> a) :
+digital_filter::digital_filter(std::vector<double> b,
+                               std::vector<double> a) :
         b(std::move(b)), a(std::move(a)) {
 }
 
-filter::filter(std::vector<double> b) :
-        filter::filter(std::move(b), {1}) {
+digital_filter::digital_filter(std::vector<double> b) :
+        digital_filter::digital_filter(std::move(b), {1}) {
 }
 
-std::vector<double> filter::transform(const std::vector<double> &signal) {
+std::vector<double> digital_filter::transform(const std::vector<double> &signal) {
     std::vector<double> result;
     result.reserve(signal.size());
 

@@ -9,8 +9,6 @@
 
 #include <mgl2/wnd.h>
 
-#include "c11_binary_latch.h"
-
 /**
  * @brief A MathGL drawing wrapper class to streamline
  * data processing and plotting.

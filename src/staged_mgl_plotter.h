@@ -4,6 +4,7 @@
 #ifndef TELEM_FILTER_STAGED_MGL_PLOTTER_H
 #define TELEM_FILTER_STAGED_MGL_PLOTTER_H
 
+#include "c11_binary_latch.h"
 #include "mgl_plotter.h"
 
 /**

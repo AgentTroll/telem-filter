@@ -23,10 +23,13 @@ add_executable(telem_filter
         src/c11_binary_latch.cpp src/c11_binary_latch.h
         src/vector2d.cpp src/vector2d.h
         src/staged_mgl_plotter.h
-        src/telem_staged_plotter.h)
+        src/staged_telem_plotter.h)
 target_link_libraries(telem_filter
         PRIVATE json
         PRIVATE ${MATHGL2_LIBRARIES}
         PRIVATE ${MATHGL2_FLTK_LIBRARIES}
         PRIVATE ${FLTK_LIBRARIES}
         PRIVATE pthread)
+target_include_directories(telem_filter
+        PRIVATE ${MATHGL2_INCLUDE_DIRS}
+        PRIVATE ${MATHGL2_FLTK_INCLUDE_DIRS})

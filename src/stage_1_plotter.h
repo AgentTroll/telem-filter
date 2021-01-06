@@ -6,7 +6,7 @@
 #define TELEM_FILTER_STAGE_1_PLOTTER_H
 
 #include "telem_data_json.h"
-#include "telem_staged_plotter.h"
+#include "staged_telem_plotter.h"
 
 /**
  * @brief Performs stage 1 of data processing and plots the
@@ -15,7 +15,7 @@
  * Stage 1 consists of linear interpolation of altitude
  * data and initial velocity component extraction.
  */
-class stage_1_plotter : public telem_staged_plotter<first_stage_plotter> {
+class stage_1_plotter : public staged_telem_plotter<first_stage_plotter> {
 private:
     /**
      * The raw parsed telemetry data.

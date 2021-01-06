@@ -13,7 +13,7 @@
  * This stage transforms the velocities from stage 1 using a
  * Parks-McClellan low-pass filter.
  */
-class stage_2_plotter : public telem_staged_plotter<stage_1_plotter> {
+class stage_2_plotter : public staged_telem_plotter<stage_1_plotter> {
 private:
     /**
      * The processed telemetry data used to produce the

@@ -13,7 +13,7 @@
  * This stage adjusts the data from stage 2 to account for
  * velocity error.
  */
-class stage_3_plotter : public telem_staged_plotter<stage_2_plotter> {
+class stage_3_plotter : public staged_telem_plotter<stage_2_plotter> {
 public:
     /**
      * Creates a new processor/plotter stage with the data

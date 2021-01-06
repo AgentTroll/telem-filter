@@ -4,8 +4,7 @@
 
 #include <nlohmann/json.hpp>
 
-telem_data_json::telem_data_json(const std::string &file_path) :
-        telem_data({}, {}) {
+telem_data_json::telem_data_json(const std::string &file_path) {
     std::ifstream telem_file{file_path};
     if (!telem_file.good()) {
         telem_file.close();

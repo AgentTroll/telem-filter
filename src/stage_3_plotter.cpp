@@ -1,7 +1,7 @@
 #include "stage_3_plotter.h"
 
 stage_3_plotter::stage_3_plotter(stage_2_plotter &prior_stage) :
-        telem_staged_plotter<stage_2_plotter>(prior_stage) {
+        staged_telem_plotter<stage_2_plotter>(prior_stage) {
 }
 
 void stage_3_plotter::plotter_draw(mglGraph *gr) {

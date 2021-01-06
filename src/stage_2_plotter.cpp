@@ -24,7 +24,7 @@ static const std::vector<double> PM_LPF_COEFFS = {
 };
 
 stage_2_plotter::stage_2_plotter(stage_1_plotter &prior_stage) :
-        telem_staged_plotter<stage_1_plotter>(prior_stage),
+        staged_telem_plotter<stage_1_plotter>(prior_stage),
         processed_data(prior_stage.get_processed_data()) {
 }
 

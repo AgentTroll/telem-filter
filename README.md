@@ -5,7 +5,7 @@ to extract the horizontal and vertical velocity. DSP
 techniques are used to filter the data.
 
 This project is very similar to my other project,
-[`AgentTroll/liftoff`](https://github.com/AgentTroll/liftoff)
+[`caojohnny/liftoff`](https://github.com/AgentTroll/liftoff)
 and even uses the same data. However, this project takes a
 slightly different approach and is not as comprehensive.
 Rather than simulating physical dynamics, `telem-filter`
@@ -30,7 +30,7 @@ derivative of position is not accounted for. It is clear
 from the velocity plots that the acceleration and jerk will
 not be realistic (will be much higher than in the real-
 world). However, with further processing and curve-fitting 
-used in `AgentTroll/liftoff`, this data can be salvaged
+used in `caojohnny/liftoff`, this data can be salvaged
 into very good data.
 
 # Disclaimer
@@ -54,7 +54,7 @@ installed on your system with PThreads and FLTK enabled.
 #### Build Commands
 
 ``` shell
-git clone https://github.com/AgentTroll/telem-plotter
+git clone https://github.com/caojohnny/telem-plotter
 cd telem-plotter
 
 mkdir build && cd build
